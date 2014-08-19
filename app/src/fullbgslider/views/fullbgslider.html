@@ -1,0 +1,30 @@
+<div class="boxgallery" id="box-gallery">
+	<div class="panel" ng-repeat="image in bgImages track by $index" ng-class="{'current': $index == currentIndex}">
+		<div class="bg-tile">
+			<div class="bg-img">
+				<img class="bg-title-img" src="{{image.src}}" alt="53e747551cab671934ed1720_1.jpg">
+			</div>
+		</div>
+		<div class="bg-tile bg_tile2">
+			<div class="bg-img">
+				<img class="bg-title-img bg-tile-img-2" src="{{image.src}}" alt="53e747551cab671934ed1720_1.jpg">
+			</div>
+		</div>
+		<div class="bg-tile bg_tile3">
+			<div class="bg-img">
+				<img class="bg-title-img bg-tile-img3" src="{{image.src}}" alt="53e747551cab671934ed1720_1.jpg">
+			</div>
+		</div>
+		<div class="bg-tile bg_tile2 bg_tile3">
+			<div class="bg-img">
+				<img class="bg-title-img bg-tile-img-2 bg-tile-img3" src="{{image.src}}" alt="53e747551cab671934ed1720_1.jpg">
+			</div>
+		</div>
+	</div>
+	<nav>
+		<span class="prev" ng-click="prev()"><i></i></span>
+		<span class="next" ng-click="next();"><i></i></span>
+	</nav>
+</div>
+
+

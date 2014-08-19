@@ -1,0 +1,305 @@
+body {
+  background-color: black;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 700;
+}
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+}
+.button {
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.logo_container {
+  height: auto;
+}
+.logo {
+  width: 309px;
+  float: left;
+  clear: left;
+}
+.logo_cont {
+  max-width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: red;
+}
+.separator {
+  height: 100px;
+}
+.coming_soon {
+  width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Lato, sans-serif;
+  color: white;
+  font-weight: 100;
+  text-align: center;
+}
+.white {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  background-color: white;
+}
+.container {
+  height: 100%;
+}
+.boxgallery {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+}
+.panel {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+
+
+.bg-tile {
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 50%;
+  height: 50%;
+}
+.bg-tile.bg_tile2 {
+  left: 50%;
+}
+.bg-tile.bg_tile3 {
+  top: 50%;
+}
+.bg-img {
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #999;
+}
+.bg-title-img {
+  position: absolute;
+  display: block;
+  width: 200%;
+  max-width: 200%;
+}
+.bg-title-img.bg-tile-img-2 {
+  left: -100%;
+}
+.bg-title-img.bg-tile-img3 {
+  top: -100%;
+}
+
+/* Navigation Arrow */
+.boxgallery > nav span {
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+  display: block;
+  width: 100px;
+  height: 100px;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.boxgallery > nav span.prev {
+  left: 0;
+}
+
+.boxgallery > nav span.next {
+  right: 0;
+}
+
+.boxgallery > nav i {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.boxgallery > nav span::before,
+.boxgallery > nav span::after,
+.boxgallery > nav i::before,
+.boxgallery > nav i::after {
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 50%;
+  outline: 1px solid transparent;
+  background: #dbccd0;
+  content: '';
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.boxgallery > nav i::before,
+.boxgallery > nav i::after {
+  z-index: 100;
+  height: 0;
+  background: #fff;
+  -webkit-transition: height 0.3s, -webkit-transform 0.3s;
+  transition: height 0.3s, transform 0.3s;
+}
+
+.boxgallery > nav span::before,
+.boxgallery > nav i::before {
+  top: 50%;
+  -webkit-transform: translateX(-50%) rotate(-135deg);
+  transform: translateX(-50%) rotate(-135deg);
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+
+.boxgallery > nav span.next::before,
+.boxgallery > nav span.next i::before {
+  -webkit-transform: translateX(-50%) rotate(135deg);
+  transform: translateX(-50%) rotate(135deg);
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+
+.boxgallery > nav span::after,
+.boxgallery > nav i::after {
+  top: 50%;
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+  transform: translateX(-50%) rotate(-45deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.boxgallery > nav span.next::after,
+.boxgallery > nav span.next i::after {
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+}
+
+.no-touch .boxgallery > nav span:hover i::before,
+.no-touch .boxgallery > nav span:hover i::after {
+  height: 50%;
+}
+
+.no-touch .boxgallery > nav span:hover::before,
+.no-touch .boxgallery > nav span:hover i::before {
+  -webkit-transform: translateX(-50%) rotate(-125deg);
+  transform: translateX(-50%) rotate(-125deg);
+}
+
+.no-touch .boxgallery > nav span.next:hover::before,
+.no-touch .boxgallery > nav span.next:hover i::before {
+  -webkit-transform: translateX(-50%) rotate(125deg);
+  transform: translateX(-50%) rotate(125deg);
+}
+
+.no-touch .boxgallery > nav span:hover::after,
+.no-touch .boxgallery > nav span:hover i::after {
+  -webkit-transform: translateX(-50%) rotate(-55deg);
+  transform: translateX(-50%) rotate(-55deg);
+}
+
+.no-touch .boxgallery > nav span.next:hover::after,
+.no-touch .boxgallery > nav span.next:hover i::after {
+  -webkit-transform: translateX(-50%) rotate(55deg);
+  transform: translateX(-50%) rotate(55deg);
+}
+
+/* Transitions and individual delays/effects */
+/* The "active" class is given to the panel that is coming */
+
+.panel.current {
+  z-index: 2;
+}
+
+.panel.active {
+  z-index: 1;
+}
+
+.panel.current .bg-img {
+  -webkit-transition: -webkit-transform 1.1s ease-in-out;
+  transition: transform 1.1s ease-in-out;
+}
+
+.boxgallery .panel.active .bg-tile {
+  -webkit-animation: scaleDown 1.1s ease-in-out;
+  animation: scaleDown 1.1s ease-in-out;
+}
+
+@-webkit-keyframes scaleDown {
+  from { -webkit-transform: translate3d(0,0,380px); transform: translate3d(0,0,380px); }
+  to { -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
+}
+
+@keyframes scaleDown {
+  from { -webkit-transform: translate3d(0,0,380px); transform: translate3d(0,0,380px); }
+  to { -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
+}
+@media (max-width: 991px) {
+  .bg-title-img {
+    height: 200%;
+  }
+}
+@media (max-width: 767px) {
+}
